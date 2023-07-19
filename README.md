@@ -19,7 +19,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Stargazers][stars-shield]][stars-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
@@ -55,7 +54,10 @@ Here's why:
 * 💡 Based on GPT-3.5, therefore corrects 99% of mistakes.
 * 🌍 Works for all languages around the world.
 * 🇫🇷🇬🇧 The application is available in French and English.
+* ⚡️ Supports keyboard shortcuts for faster operations.
 
+
+Démo gif (The gif is heavy, it may take time to load) :
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 
@@ -74,15 +76,9 @@ Here's why:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get an API Key at [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)
 2. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
@@ -91,10 +87,24 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+
+4. Launch dev mode
+   ```sh
+   npm run dev
    ```
+
+5. To define the API key in the app
+
+6. To add your prompt, here's an example of how to correct the text:
+   ```
+   You are an assistant that revises a user's document to correct it. Make sure to:
+   - Fix spelling and grammar
+   - Avoid replacing words
+   - Avoid changing words
+   - If the text contains quotes, repeat the text inside the quotes exactly as it is
+   - Do not change the meaning of the text
+   - Preserve all emojis
+   - Avoid using overly formal language```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,22 +114,14 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-  - [ ] Chinese
-  - [ ] Spanish
+- [x] Add custom prompts
+- [x] Define keyboard shortcuts for prompts
+- [x] Multi-language Support
+  - [x] French
+  - [x] English
+- [ ] Regenerate response
+- [ ] History
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,9 +130,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Alexandre Orliaguet - [@alexandre_orliaguet](https://linkedin.com/in/alexandre-orliaguet)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,14 +140,6 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
