@@ -151,7 +151,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/alexandre-orliaguet
-[product-screenshot]: https://github.com/AlexandreOrlg/Iasterisk/blob/master/demo.gif
+[product-screenshot]: https://github.com/AlexandreOrlg/Iasterisk/blob/master/d%C3%A9mo.gif?raw=true
 
 [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
 [Svelte-url]: https://svelte.dev/
