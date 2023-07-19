@@ -35,7 +35,7 @@
 
   <p align="center">
 Yet another new spelling corrector powered by AI <br>
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/AlexandreOrlg/Iasterisk/blob/master/d%C3%A9mo.gif">View Demo</a>
 
   </p>
 </div>
