@@ -93,9 +93,9 @@ Démo gif (The gif is heavy, it may take time to load) :
    npm run dev
    ```
 
-5. To define the API key in the app
+5. Define the API key in the app
 
-6. To add your prompt, here's an example of how to correct the text:
+6. Add your prompt, here's an example of how to correct the text:
    ```
    You are an assistant that revises a user's document to correct it. Make sure to:
    - Fix spelling and grammar
