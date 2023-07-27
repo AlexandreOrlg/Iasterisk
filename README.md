@@ -34,7 +34,7 @@
 <h3 align="center">Iasterisk</h3>
 
   <p align="center">
-Yet another new spelling corrector powered by AI <br>
+Introducing another AI-powered spelling corrector <br>
     <a href="https://github.com/AlexandreOrlg/Iasterisk/blob/master/d%C3%A9mo.gif">View Demo</a>
 
   </p>
