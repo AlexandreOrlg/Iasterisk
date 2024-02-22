@@ -5,7 +5,6 @@ import { createTray } from './tray'
 import { setUpOpenAi } from './aiCorrection'
 
 
-console.log(process.env);
 app.whenReady().then(() => {
 
   electronApp.setAppUserModelId('com.electron')
@@ -23,6 +22,7 @@ app.whenReady().then(() => {
   })
 })
 
+
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
@@ -32,3 +32,4 @@ app.on('window-all-closed', () => {
 app.on('will-quit', () => {
   globalShortcut.unregisterAll()
 })
+

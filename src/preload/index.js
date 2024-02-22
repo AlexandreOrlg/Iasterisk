@@ -9,5 +9,7 @@ contextBridge.exposeInMainWorld('store', {
   },
   set(property, val) {
     ipcRenderer.send('electron-store-set', property, val)
-  }
+  },
+  onUpdateHistory: (callback) =>
+    ipcRenderer.on('update-history', (_event, value) => callback(value))
 })

@@ -1,5 +1,5 @@
 import { get, writable } from 'svelte/store'
-import dataService from "./services/dataService";
+import dataService from './services/dataService'
 
 function createAppStore() {
   const initialState = getInitialState()
@@ -9,7 +9,8 @@ function createAppStore() {
   function getInitialState() {
     return {
       apiKey: dataService.get('apiKey') || null,
-      promptList: dataService.get('promptList') || []
+      promptList: dataService.get('promptList') || [],
+      history: dataService.get('history') || []
     }
   }
 
@@ -44,6 +45,7 @@ function createAppStore() {
 
   return {
     subscribe,
+    update,
     setApiKey,
     addPrompt,
     removePrompt,

@@ -7,6 +7,7 @@
   "confirmations.message_successSave": "Your changes have been successfully saved.",
   "menu.prompt": "My prompts",
   "menu.settings": "Settings",
+  "menu.history" : "History",
   "prompts_view.addPromptAction": "Add a prompt",
   "prompts_view.modal.addPrompt": "Add a prompt",
   "prompts_view.modal.defineShortcut": "Define the keyboard shortcut",
@@ -26,5 +27,6 @@
   "settings_view.action.updateAPIKey": "Update my API key",
   "settings_view.apiKeyLabel": "OpenAI API Key",
   "settings_view.languageLabel": "Language",
-  "settings_view.title": "Settings"
+  "settings_view.title": "Settings",
+  "history_view.title" : "History"
 }

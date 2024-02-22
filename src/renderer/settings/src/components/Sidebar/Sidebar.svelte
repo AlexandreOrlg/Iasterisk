@@ -1,5 +1,5 @@
 <script>
-import logo from "../../../../../resources/icon.png";
+import logo from "../../../../../../resources/icon.png";
 </script>
 
 <div class="h-screen flex w-full flex-col">

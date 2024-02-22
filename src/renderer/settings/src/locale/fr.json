@@ -7,6 +7,7 @@
   "confirmations.message_successSave": "Vos modifications ont été enregistrées avec succès.",
   "menu.prompt": "Mes prompts",
   "menu.settings": "Paramètres",
+  "menu.history" : "Historique",
   "prompts_view.addPromptAction": "Ajouter un prompt",
   "prompts_view.modal.addPrompt": "Ajouter un prompt",
   "prompts_view.modal.defineShortcut": "Définir le raccourci clavier",
@@ -26,5 +27,6 @@
   "settings_view.action.updateAPIKey": "Mettre à jour ma clé API",
   "settings_view.apiKeyLabel": "Clé API OpenAI",
   "settings_view.languageLabel": "Langue",
-  "settings_view.title": "Paramètres"
+  "settings_view.title": "Paramètres",
+  "history_view.title" : "Historique"
 }

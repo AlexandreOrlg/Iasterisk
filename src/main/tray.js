@@ -31,6 +31,17 @@ const createMenu = (menuItems) => {
     ...menuItems,
     { type: 'separator' },
     {
+      label: 'Regenerate',
+      click: () => {
+        if (BrowserWindow.getAllWindows().length > 0) {
+          mainWindow.show()
+        } else {
+          createWindow()
+        }
+      }
+    },
+    { type: 'separator' },
+    {
       label: 'Réglages',
       click: () => {
         if (BrowserWindow.getAllWindows().length > 0) {

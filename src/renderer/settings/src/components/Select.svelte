@@ -7,3 +7,4 @@ export let datas = []
     <option value={data.id}>{data.value}</option>
   {/each}
 </select>
+
