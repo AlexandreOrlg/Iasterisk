@@ -1,8 +1,8 @@
-import {Tray, ipcMain, Menu, app, BrowserWindow, globalShortcut} from 'electron'
+import { Tray, ipcMain, Menu, app, globalShortcut, clipboard } from 'electron'
 import { getIcon } from './utils'
 import { store } from '../store'
-import { createWindow, mainWindow } from './mainWindow'
-import { getCorrection } from './aiCorrection'
+import { getCommandWindow, getSettingsWindow } from './windowManager'
+import { getCorrection } from '../services/correctionService'
 
 export let tray
 
@@ -31,24 +31,9 @@ const createMenu = (menuItems) => {
     ...menuItems,
     { type: 'separator' },
     {
-      label: 'Regenerate',
-      click: () => {
-        if (BrowserWindow.getAllWindows().length > 0) {
-          mainWindow.show()
-        } else {
-          createWindow()
-        }
-      }
-    },
-    { type: 'separator' },
-    {
       label: 'Réglages',
       click: () => {
-        if (BrowserWindow.getAllWindows().length > 0) {
-          mainWindow.show()
-        } else {
-          createWindow()
-        }
+        getSettingsWindow().show()
       }
     },
     { label: 'Quitter', click: () => app.quit() }
@@ -59,7 +44,6 @@ const createMenu = (menuItems) => {
 
 export const updateTray = (promptList) => {
   const items = promptList || store?.get('promptList') || []
-  console.log('list : ', items)
   const menuItems = items.map(createMenuItem)
   createMenu(menuItems)
   updateGlobalShortcut(items)
@@ -75,5 +59,17 @@ const updateGlobalShortcut = (promptList) => {
     if (!ret) {
       console.log('registration failed')
     }
+  })
+
+  globalShortcut.register('option+f', () => {
+    getSettingsWindow().blur()
+    getCommandWindow().show()
+    getCommandWindow().on('ready-to-show', () => {
+      getCommandWindow().webContents.send('update', {
+        loading: false,
+        initialText: clipboard.readText(),
+        type: 'FREE'
+      })
+    })
   })
 }

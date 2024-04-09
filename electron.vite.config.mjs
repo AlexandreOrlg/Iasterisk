@@ -7,14 +7,23 @@ export default defineConfig({
     plugins: [externalizeDepsPlugin()]
   },
   preload: {
-    plugins: [externalizeDepsPlugin()]
+    plugins: [externalizeDepsPlugin()],
+    build: {
+      rollupOptions: {
+        input: {
+          settings: resolve(__dirname, 'src/preload/settings.js'),
+          command: resolve(__dirname, 'src/preload/command.js')
+        }
+      }
+    }
   },
   renderer: {
     plugins: [svelte()],
     build: {
       rollupOptions: {
         input: {
-          settings: resolve(__dirname, 'src/renderer/settings/settings.html')
+          settings: resolve(__dirname, 'src/renderer/settings/settings.html'),
+          command: resolve(__dirname, 'src/renderer/command/command.html')
         }
       }
     }

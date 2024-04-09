@@ -1,4 +1,5 @@
 import { electronAPI } from '@electron-toolkit/preload'
+
 const { contextBridge, ipcRenderer } = require('electron')
 
 contextBridge.exposeInMainWorld('electron', electronAPI)

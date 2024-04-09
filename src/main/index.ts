@@ -1,27 +1,9 @@
-import { app, BrowserWindow, globalShortcut, session } from 'electron'
-import { electronApp, optimizer } from '@electron-toolkit/utils'
-import { createWindow } from './mainWindow'
+import { app, globalShortcut } from 'electron'
 import { createTray } from './tray'
-import { setUpOpenAi } from './aiCorrection'
 
-
-app.whenReady().then(() => {
-
-  electronApp.setAppUserModelId('com.electron')
-
-  app.on('browser-window-created', (_, window) => {
-    optimizer.watchWindowShortcuts(window)
-  })
-
-  createWindow()
+app.on('ready', () => {
   createTray()
-  setUpOpenAi()
-
-  app.on('activate', function () {
-    if (BrowserWindow.getAllWindows().length === 0) createWindow()
-  })
 })
-
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
@@ -32,4 +14,3 @@ app.on('window-all-closed', () => {
 app.on('will-quit', () => {
   globalShortcut.unregisterAll()
 })
-
